@@ -266,21 +266,51 @@ footer {
 }
 
 /* MOBILE RESPONSIVENESS */
+@media (max-width: 992px) {
+    h1 { font-size: 3.5rem !important; }
+    .hero { height: auto; padding: 120px 0 60px; }
+    .hero-content { max-width: 100%; text-align: center; }
+    .hero-image, .hero-bg { display: none; } /* Simplify for tablet */
+    .hero-stats { justify-content: center; }
+}
+
 @media (max-width: 768px) {
-    .hero {
-        flex-direction: column;
-        text-align: center;
-        padding-top: 120px;
+    .container { padding: 0 1.5rem; }
+    .section-padding { padding: 60px 0; }
+    
+    h1 { font-size: 2.8rem !important; }
+    h2 { font-size: 2.2rem !important; }
+    
+    .nav-links { display: none; }
+    
+    /* Hero */
+    .hero { padding-top: 100px; }
+    .hero-stats { flex-direction: column; gap: 1.5rem !important; }
+    
+    /* About & Process Grids */
+    #about .container > div,
+    #how-it-works .container > div {
+        grid-template-columns: 1fr !important;
+        gap: 3rem !important;
     }
-    .hero-image, .hero-bg {
-        width: 100%;
-        height: 50%;
-        top: 50%;
+    
+    #about div:nth-child(2) { order: -1; } /* Image/Feature first on mobile */
+    
+    /* Verticals & Tiers */
+    #verticals .container > div,
+    #tiers .container > div {
+        grid-template-columns: 1fr !important;
     }
-    .hero h1 {
-        font-size: 3rem;
-    }
-    .nav-links {
-        display: none;
+    
+    .tier.featured {
+        transform: scale(1) !important;
+        margin: 1.5rem 0;
     }
 }
+
+@media (max-width: 480px) {
+    h1 { font-size: 2.2rem !important; }
+    .logo { font-size: 1.2rem; }
+    .btn-contact { padding: 0.7rem 1.2rem; font-size: 0.75rem; }
+}
+

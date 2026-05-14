@@ -428,25 +428,27 @@ footer {
 }
 
 .amount-buttons {
-    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
-    justify-content: center;
-    flex-wrap: wrap;
+    max-width: 600px;
+    margin: 0 auto;
 }
 
 .amount-btn {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--text-main);
-    padding: 1rem 1.2rem;
+    padding: 1.2rem 1rem;
     border-radius: 8px;
     cursor: pointer;
     transition: var(--transition);
-    min-width: 130px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     font-family: 'Outfit', sans-serif;
+    text-align: center;
 }
 
 .amount-btn span {
@@ -596,7 +598,7 @@ footer {
     .calculator-container {
         padding: 1.5rem;
     }
-    .amount-btn {
-        min-width: calc(50% - 0.5rem);
+    .amount-buttons {
+        grid-template-columns: repeat(2, 1fr);
     }
 }

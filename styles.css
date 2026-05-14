@@ -150,7 +150,7 @@ nav.scrolled {
     width: 50%;
     height: 100%;
     object-fit: cover;
-    object-position: top center;
+    object-position: center 15%;
     opacity: 0.6;
     z-index: 0;
 }

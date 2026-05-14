@@ -35,4 +35,47 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    // Investment Calculator Logic
+    const amountBtns = document.querySelectorAll('.amount-btn');
+    const bankYear1 = document.getElementById('bank-year-1');
+    const bankYear3 = document.getElementById('bank-year-3');
+    const lynnYear1 = document.getElementById('lynn-year-1');
+    const lynnYear3 = document.getElementById('lynn-year-3');
+    const diffValue = document.getElementById('diff-value');
+    const lynnTierLabel = document.getElementById('lynn-tier-label');
+
+    if (amountBtns.length > 0) {
+        const formatCurrency = (num) => {
+            return '$' + Math.round(num).toLocaleString('en-US');
+        };
+
+        amountBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                // UI Toggle
+                amountBtns.forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+
+                const amount = parseInt(btn.getAttribute('data-amount'));
+                const tier = btn.getAttribute('data-tier');
+
+                // Calculations (Simple Interest as per screenshot analysis)
+                const bYear1 = amount * 0.06;
+                const bYear3 = amount + (bYear1 * 3);
+                
+                const lYear1 = amount * 0.17;
+                const lYear3 = amount + (lYear1 * 3);
+                
+                const annualDiff = lYear1 - bYear1;
+
+                // Update UI with smooth transition feel
+                bankYear1.innerText = formatCurrency(bYear1);
+                bankYear3.innerText = formatCurrency(bYear3);
+                lynnYear1.innerText = formatCurrency(lYear1);
+                lynnYear3.innerText = formatCurrency(lYear3);
+                diffValue.innerText = formatCurrency(annualDiff) + ' more';
+                lynnTierLabel.innerText = tier.toUpperCase();
+            });
+        });
+    }
 });

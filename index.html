@@ -195,50 +195,67 @@
         </div>
     </section>
 
-    <!-- TIERS SECTION -->
+    <!-- INVESTMENT CALCULATOR -->
     <section id="tiers" class="section-padding">
         <div class="container">
             <div class="text-center reveal" style="margin-bottom: 4rem;">
-                <span class="hero-eyebrow">Participation Levels</span>
-                <h2 style="font-size: 3.5rem;">Investment Tiers</h2>
+                <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Your money deserves better than 6%</h2>
+                <p style="color: var(--text-dim); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
+                    Lynn Capital invests your capital into real South African assets — Airbnb rentals and franchise operations — and returns 17% annually. See what that means for you.
+                </p>
             </div>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 2rem;">
-                <!-- Tier 1 -->
-                <div class="reveal" style="background: var(--bg-card); padding: 3.5rem 2.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; text-align: center; display: flex; flex-direction: column;">
-                    <span style="color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 1.5rem;">Entry</span>
-                    <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">$5,000</h3>
-                    <p style="color: var(--gold-bright); font-style: italic; margin-bottom: 2rem;">15% Annual Profit Share</p>
-                    <ul style="list-style: none; color: var(--text-dim); text-align: left; margin-bottom: 3rem; flex-grow: 1;">
-                        <li style="margin-bottom: 1rem;">• Portfolio Participation</li>
-                        <li style="margin-bottom: 1rem;">• Annual Distribution</li>
-                        <li style="margin-bottom: 1rem;">• 12-Month Renewable Terms</li>
-                        <li>• Quarterly Performance Updates</li>
-                    </ul>
+
+            <div class="calculator-container reveal">
+                <div class="amount-selector">
+                    <p class="selector-label">Select your investment amount</p>
+                    <div class="amount-buttons">
+                        <button class="amount-btn active" data-amount="6000" data-tier="Pioneer">$6,000<span>Pioneer</span></button>
+                        <button class="amount-btn" data-amount="10000" data-tier="Builder">$10,000<span>Builder</span></button>
+                        <button class="amount-btn" data-amount="20000" data-tier="Gold Partner">$20,000<span>Gold Partner</span></button>
+                        <button class="amount-btn" data-amount="35000" data-tier="Platinum Partner">$35,000<span>Platinum Partner</span></button>
+                        <button class="amount-btn" data-amount="65000" data-tier="Lynn Premier">$65,000<span>Lynn Premier</span></button>
+                        <button class="amount-btn" data-amount="100000" data-tier="Lynn Premier">$100,000<span>Lynn Premier</span></button>
+                    </div>
                 </div>
-                <!-- Tier 2 -->
-                <div class="reveal" style="background: #151a22; padding: 3.5rem 2.5rem; border: 2px solid var(--gold); border-radius: 8px; text-align: center; transform: scale(1.05); z-index: 10; position: relative;">
-                    <div style="position: absolute; top: -15px; left: 50%; transform: translateX(-50%); background: var(--gold); color: #000; padding: 5px 20px; font-size: 0.7rem; font-weight: 700; text-transform: uppercase; border-radius: 20px;">Most Popular</div>
-                    <span style="color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 1.5rem; display: block;">Growth</span>
-                    <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">$15,000</h3>
-                    <p style="color: var(--gold-bright); font-style: italic; margin-bottom: 2rem;">18% Annual Profit Share</p>
-                    <ul style="list-style: none; color: var(--text-dim); text-align: left; margin-bottom: 3rem;">
-                        <li style="margin-bottom: 1rem; color: #fff;">• All Entry Benefits</li>
-                        <li style="margin-bottom: 1rem; color: #fff;">• Strategic Venture Exposure</li>
-                        <li style="margin-bottom: 1rem; color: #fff;">• Priority Deal Allocation</li>
-                        <li>• Semi-Annual Management Briefing</li>
-                    </ul>
+
+                <div class="comparison-cards">
+                    <!-- Standard Bank Card -->
+                    <div class="comp-card">
+                        <div class="card-header">STANDARD BANK (6% P.A.)</div>
+                        <div class="card-body">
+                            <div class="earning-group">
+                                <span class="earning-label">You earn after 1 year</span>
+                                <h3 class="earning-value" id="bank-year-1">$360</h3>
+                            </div>
+                            <div class="earning-divider"></div>
+                            <div class="earning-group">
+                                <span class="earning-label">After 3 years total</span>
+                                <h3 class="earning-value small" id="bank-year-3">$7,080</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Lynn Capital Card -->
+                    <div class="comp-card featured">
+                        <div class="card-badge">LYNN CAPITAL — 17% TARGET</div>
+                        <div class="card-header" id="lynn-tier-label">PIONEER</div>
+                        <div class="card-body">
+                            <div class="earning-group">
+                                <span class="earning-label">You earn after 1 year</span>
+                                <h3 class="earning-value" id="lynn-year-1">$1,020</h3>
+                            </div>
+                            <div class="earning-divider"></div>
+                            <div class="earning-group">
+                                <span class="earning-label">After 3 years total</span>
+                                <h3 class="earning-value small" id="lynn-year-3">$9,060</h3>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-                <!-- Tier 3 -->
-                <div class="reveal" style="background: var(--bg-card); padding: 3.5rem 2.5rem; border: 1px solid rgba(255,255,255,0.05); border-radius: 8px; text-align: center; display: flex; flex-direction: column;">
-                    <span style="color: var(--gold); text-transform: uppercase; letter-spacing: 3px; font-size: 0.8rem; margin-bottom: 1.5rem;">Partner</span>
-                    <h3 style="font-size: 3rem; margin-bottom: 0.5rem;">$30,000+</h3>
-                    <p style="color: var(--gold-bright); font-style: italic; margin-bottom: 2rem;">20% Annual Profit Share</p>
-                    <ul style="list-style: none; color: var(--text-dim); text-align: left; margin-bottom: 3rem; flex-grow: 1;">
-                        <li style="margin-bottom: 1rem;">• All Growth Benefits</li>
-                        <li style="margin-bottom: 1rem;">• Full Portfolio Visibility</li>
-                        <li style="margin-bottom: 1rem;">• Co-Decision Rights (Advisory)</li>
-                        <li>• Direct Management Access</li>
-                    </ul>
+
+                <div class="comparison-footer">
+                    <div class="footer-arrow">↓</div>
+                    <p>With Lynn Capital you earn <span id="diff-value" class="text-gold">$660 more</span> annually</p>
                 </div>
             </div>
         </div>

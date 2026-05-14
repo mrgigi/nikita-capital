@@ -470,6 +470,15 @@ footer {
     color: var(--gold-bright);
 }
 
+.amount-btn.tier-gold {
+    background: rgba(197, 160, 68, 0.08);
+    border-color: rgba(197, 160, 68, 0.3);
+}
+
+.amount-btn.tier-gold span {
+    color: var(--gold-bright);
+}
+
 .comparison-cards {
     display: grid;
     grid-template-columns: 1fr 1fr;

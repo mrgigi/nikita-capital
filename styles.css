@@ -352,6 +352,9 @@ footer {
         max-width: 100%; 
         text-align: center; 
     }
+    .hero-btns {
+        justify-content: center;
+    }
     .hero-stats { 
         justify-content: center; 
         flex-direction: column; 

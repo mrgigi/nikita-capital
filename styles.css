@@ -403,44 +403,47 @@ footer {
 
 
 /* INVESTMENT CALCULATOR SECTION */
-.calculator-container {
-    max-width: 1000px;
-    margin: 0 auto;
+.calculator-wrapper {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 4rem;
     background: var(--bg-card);
     border: 1px solid var(--border);
     border-radius: 16px;
-    padding: 3rem;
+    padding: 4rem;
     backdrop-filter: blur(10px);
+    align-items: flex-start;
+}
+
+.calc-controls {
+    text-align: left;
 }
 
 .amount-selector {
-    text-align: center;
-    margin-bottom: 3.5rem;
+    margin-bottom: 2.5rem;
 }
 
 .selector-label {
     color: var(--text-dim);
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     font-weight: 500;
 }
 
 .amount-buttons {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
-    max-width: 600px;
-    margin: 0 auto;
+    gap: 0.8rem;
 }
 
 .amount-btn {
     background: rgba(255,255,255,0.03);
     border: 1px solid rgba(255,255,255,0.1);
     color: var(--text-main);
-    padding: 1.2rem 1rem;
-    border-radius: 8px;
+    padding: 0.8rem 0.5rem;
+    border-radius: 6px;
     cursor: pointer;
     transition: var(--transition);
     display: flex;
@@ -449,13 +452,14 @@ footer {
     justify-content: center;
     font-family: 'Outfit', sans-serif;
     text-align: center;
+    font-size: 1rem;
 }
 
 .amount-btn span {
-    font-size: 0.65rem;
+    font-size: 0.6rem;
     font-weight: 400;
     color: var(--text-dim);
-    margin-top: 0.3rem;
+    margin-top: 0.2rem;
     text-transform: uppercase;
     letter-spacing: 1px;
 }
@@ -485,17 +489,16 @@ footer {
 }
 
 .comparison-cards {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 2.5rem;
-    margin-bottom: 2.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
 }
 
 .comp-card {
     background: rgba(255,255,255,0.02);
     border: 1px solid rgba(255,255,255,0.05);
     border-radius: 12px;
-    padding: 2.5rem;
+    padding: 2rem;
     position: relative;
     transition: var(--transition);
 }
@@ -512,8 +515,8 @@ footer {
     right: 0;
     background: var(--gold);
     color: #000;
-    padding: 0.4rem 1.2rem;
-    font-size: 0.7rem;
+    padding: 0.3rem 1rem;
+    font-size: 0.65rem;
     font-weight: 700;
     border-radius: 0 10px 0 10px;
     text-transform: uppercase;
@@ -521,9 +524,9 @@ footer {
 
 .card-header {
     color: var(--text-dim);
-    font-size: 0.8rem;
+    font-size: 0.75rem;
     letter-spacing: 2px;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1.5rem;
     text-transform: uppercase;
     font-weight: 600;
 }
@@ -535,12 +538,12 @@ footer {
 .earning-label {
     display: block;
     color: var(--text-dim);
-    font-size: 0.9rem;
-    margin-bottom: 0.8rem;
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
 }
 
 .earning-value {
-    font-size: 3.5rem;
+    font-size: 2.8rem;
     color: #fff;
     margin-bottom: 0;
     font-family: 'Playfair Display', serif;
@@ -551,54 +554,46 @@ footer {
 }
 
 .earning-value.small {
-    font-size: 2.5rem;
+    font-size: 2rem;
 }
 
 .earning-divider {
     height: 1px;
     background: rgba(255,255,255,0.07);
-    margin: 2.5rem 0;
+    margin: 1.5rem 0;
 }
 
 .comparison-footer {
-    text-align: center;
-    padding-top: 2.5rem;
+    padding-top: 2rem;
     border-top: 1px solid rgba(255,255,255,0.05);
+    margin-top: 1rem;
 }
 
 .footer-arrow {
-    font-size: 1.8rem;
-    color: var(--gold);
-    margin-bottom: 1rem;
-    animation: bounce 2s infinite;
-}
-
-@keyframes bounce {
-    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-    40% {transform: translateY(-10px);}
-    60% {transform: translateY(-5px);}
+    display: none;
 }
 
 .comparison-footer p {
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     color: var(--text-main);
-    font-weight: 400;
 }
 
-@media (max-width: 900px) {
-    .comparison-cards {
+@media (max-width: 1024px) {
+    .calculator-wrapper {
         grid-template-columns: 1fr;
-        gap: 2rem;
+        gap: 3rem;
+        padding: 2.5rem;
     }
-    .earning-value { font-size: 2.8rem; }
-    .earning-value.small { font-size: 2rem; }
 }
 
 @media (max-width: 600px) {
-    .calculator-container {
+    .calculator-wrapper {
         padding: 1.5rem;
     }
     .amount-buttons {
         grid-template-columns: repeat(2, 1fr);
     }
+    .earning-value { font-size: 2.2rem; }
+    .earning-value.small { font-size: 1.6rem; }
 }
+

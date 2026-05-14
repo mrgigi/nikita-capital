@@ -198,64 +198,67 @@
     <!-- INVESTMENT CALCULATOR -->
     <section id="tiers" class="section-padding">
         <div class="container">
-            <div class="text-center reveal" style="margin-bottom: 4rem;">
-                <h2 style="font-size: 3.5rem; margin-bottom: 1.5rem;">Your money deserves better than 6%</h2>
-                <p style="color: var(--text-dim); max-width: 800px; margin: 0 auto; font-size: 1.2rem;">
-                    Lynn Capital invests your capital into real South African assets — Airbnb rentals and franchise operations — and returns 17% annually. See what that means for you.
-                </p>
-            </div>
-
-            <div class="calculator-container reveal">
-                <div class="amount-selector">
-                    <p class="selector-label">Select your investment amount</p>
-                    <div class="amount-buttons">
-                        <button class="amount-btn active" data-amount="6000" data-tier="Pioneer">$6,000<span>Pioneer</span></button>
-                        <button class="amount-btn" data-amount="10000" data-tier="Builder">$10,000<span>Builder</span></button>
-                        <button class="amount-btn" data-amount="20000" data-tier="Gold Partner">$20,000<span>Gold Partner</span></button>
-                        <button class="amount-btn" data-amount="35000" data-tier="Platinum Partner">$35,000<span>Platinum Partner</span></button>
-                        <button class="amount-btn tier-gold" data-amount="65000" data-tier="Lynn Premier">$65,000<span>Lynn Premier</span></button>
-                        <button class="amount-btn tier-gold" data-amount="100000" data-tier="Lynn Sovereign">$100,000<span>Lynn Sovereign</span></button>
+            <div class="calculator-wrapper reveal">
+                <!-- Left: Control Panel -->
+                <div class="calc-controls">
+                    <h2 style="font-size: 2.8rem; margin-bottom: 1.5rem;">Your money deserves better than 6%</h2>
+                    <p style="color: var(--text-dim); margin-bottom: 2.5rem; font-size: 1.1rem;">
+                        Lynn Capital invests your capital into real South African assets and returns 17% annually.
+                    </p>
+                    
+                    <div class="amount-selector">
+                        <p class="selector-label">Select investment amount</p>
+                        <div class="amount-buttons">
+                            <button class="amount-btn active" data-amount="6000" data-tier="Pioneer">$6k<span>Pioneer</span></button>
+                            <button class="amount-btn" data-amount="10000" data-tier="Builder">$10k<span>Builder</span></button>
+                            <button class="amount-btn" data-amount="20000" data-tier="Gold Partner">$20k<span>Gold</span></button>
+                            <button class="amount-btn" data-amount="35000" data-tier="Platinum Partner">$35k<span>Platinum</span></button>
+                            <button class="amount-btn tier-gold" data-amount="65000" data-tier="Lynn Premier">$65k<span>Premier</span></button>
+                            <button class="amount-btn tier-gold" data-amount="100000" data-tier="Lynn Sovereign">$100k<span>Sovereign</span></button>
+                        </div>
+                    </div>
+                    
+                    <div class="comparison-footer">
+                        <div class="footer-arrow">↓</div>
+                        <p>With Lynn Capital you earn <span id="diff-value" class="text-gold">$660 more</span> annually</p>
                     </div>
                 </div>
 
-                <div class="comparison-cards">
-                    <!-- Standard Bank Card -->
-                    <div class="comp-card">
-                        <div class="card-header">STANDARD BANK (6% P.A.)</div>
-                        <div class="card-body">
-                            <div class="earning-group">
-                                <span class="earning-label">You earn after 1 year</span>
-                                <h3 class="earning-value" id="bank-year-1">$360</h3>
+                <!-- Right: Results Panel -->
+                <div class="calc-results">
+                    <div class="comparison-cards">
+                        <!-- Lynn Capital Card (Primary) -->
+                        <div class="comp-card featured">
+                            <div class="card-badge">LYNN CAPITAL — 17% TARGET</div>
+                            <div class="card-header" id="lynn-tier-label">PIONEER</div>
+                            <div class="card-body">
+                                <div class="earning-group">
+                                    <span class="earning-label">You earn after 1 year</span>
+                                    <h3 class="earning-value" id="lynn-year-1">$1,020</h3>
+                                </div>
+                                <div class="earning-divider"></div>
+                                <div class="earning-group">
+                                    <span class="earning-label">After 3 years total</span>
+                                    <h3 class="earning-value small" id="lynn-year-3">$9,060</h3>
+                                </div>
                             </div>
-                            <div class="earning-divider"></div>
-                            <div class="earning-group">
-                                <span class="earning-label">After 3 years total</span>
-                                <h3 class="earning-value small" id="bank-year-3">$7,080</h3>
+                        </div>
+
+                        <!-- Standard Bank Card (Secondary) -->
+                        <div class="comp-card">
+                            <div class="card-header">BANK (6% P.A.)</div>
+                            <div class="card-body">
+                                <div class="earning-group">
+                                    <span class="earning-label">1 year profit</span>
+                                    <h3 class="earning-value" id="bank-year-1" style="font-size: 2rem;">$360</h3>
+                                </div>
+                                <div class="earning-group" style="margin-top: 1rem;">
+                                    <span class="earning-label">3 year total</span>
+                                    <h3 class="earning-value small" id="bank-year-3" style="font-size: 1.5rem;">$7,080</h3>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-                    <!-- Lynn Capital Card -->
-                    <div class="comp-card featured">
-                        <div class="card-badge">LYNN CAPITAL — 17% TARGET</div>
-                        <div class="card-header" id="lynn-tier-label">PIONEER</div>
-                        <div class="card-body">
-                            <div class="earning-group">
-                                <span class="earning-label">You earn after 1 year</span>
-                                <h3 class="earning-value" id="lynn-year-1">$1,020</h3>
-                            </div>
-                            <div class="earning-divider"></div>
-                            <div class="earning-group">
-                                <span class="earning-label">After 3 years total</span>
-                                <h3 class="earning-value small" id="lynn-year-3">$9,060</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="comparison-footer">
-                    <div class="footer-arrow">↓</div>
-                    <p>With Lynn Capital you earn <span id="diff-value" class="text-gold">$660 more</span> annually</p>
                 </div>
             </div>
         </div>

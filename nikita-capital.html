@@ -3,36 +3,40 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lynn Capital — Private Investment</title>
+<title>Nikita Capital — Private Investment Memorandum</title>
 <meta name="description" content="Exclusive private investment vehicle focused on high-yield hospitality, franchise, and real estate assets.">
 <!-- Social Sharing Metadata (WhatsApp, LinkedIn, etc.) -->
-<meta property="og:title" content="Lynn Capital — Private Investment">
+<meta property="og:title" content="Nikita Capital — Private Investment">
 <meta property="og:description" content="Exclusive private investment vehicle focused on high-yield hospitality, franchise, and real estate assets.">
-<meta property="og:image" content="https://lynncapital.vercel.app/lynn-hero.jpg">
-<meta property="og:url" content="https://lynncapital.vercel.app/lynn-capital.html">
+<meta property="og:image" content="https://nikitacapital.vercel.app/nikita-hero.jpg">
+<meta property="og:url" content="https://nikitacapital.vercel.app/nikita-capital.html">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://lynncapital.vercel.app/lynn-hero.jpg">
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<meta name="twitter:image" content="https://nikitacapital.vercel.app/nikita-hero.jpg">
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Syne:wght@500;700;800&display=swap" rel="stylesheet">
 <style>
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
 :root {
-  --ink: #1a1612;
-  --paper: #f8f5ef;
-  --cream: #f0ead8;
-  --gold: #b8902a;
-  --gold-light: #e8d49a;
-  --gold-pale: #faf5e4;
-  --warm: #7a6a52;
-  --muted: #9a8f7e;
-  --border: #ddd5c0;
+  --bg-dark: #05070a;
+  --bg-deep: #020305;
+  --primary: #00f090;
+  --primary-bright: #39ffb1;
+  --primary-glow: rgba(0, 240, 144, 0.1);
+  --text-main: #f8fafc;
+  --text-dim: #94a3b8;
+  --border: rgba(255, 255, 255, 0.05);
+  --border-glow: rgba(0, 240, 144, 0.15);
+  --glass: rgba(255, 255, 255, 0.02);
+  --transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+  --font-heading: 'Syne', sans-serif;
+  --font-body: 'Plus Jakarta Sans', sans-serif;
 }
 
 html, body {
-  background: var(--paper);
-  color: var(--ink);
-  font-family: 'Jost', sans-serif;
+  background: var(--bg-dark);
+  color: var(--text-main);
+  font-family: var(--font-body);
   font-weight: 300;
   -webkit-font-smoothing: antialiased;
 }
@@ -45,17 +49,19 @@ html, body {
 
 /* TOP STRIP */
 .top-strip {
-  background: var(--ink);
-  color: var(--gold-light);
+  background: var(--bg-deep);
+  color: var(--primary);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 40px;
-  font-family: 'Jost', sans-serif;
+  padding: 14px 40px;
+  font-family: var(--font-heading);
+  font-weight: 700;
   font-size: 10px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  margin: 0 -40px 0;
+  margin: 0 -40px;
+  border-bottom: 1px solid var(--border);
 }
 
 /* HERO */
@@ -63,14 +69,15 @@ html, body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 0;
-  min-height: 260px;
+  min-height: 280px;
   margin: 0 -40px;
   position: relative;
+  border-bottom: 1px solid var(--border);
 }
 
 .hero-left {
-  background: var(--ink);
-  padding: 50px 40px 50px 40px;
+  background: var(--bg-deep);
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -79,82 +86,89 @@ html, body {
 }
 
 .hero-left::after {
-  content: 'L';
+  content: 'N';
   position: absolute;
-  right: -20px;
+  right: -10px;
   top: 50%;
   transform: translateY(-50%);
-  font-family: 'Playfair Display', serif;
-  font-size: 220px;
-  color: rgba(184, 144, 42, 0.08);
+  font-family: var(--font-heading);
+  font-weight: 800;
+  font-size: 260px;
+  color: rgba(0, 240, 144, 0.03);
   line-height: 1;
   pointer-events: none;
 }
 
 .brand-sub {
   font-size: 9px;
-  letter-spacing: 0.4em;
-  color: var(--gold);
+  font-weight: 600;
+  letter-spacing: 0.3em;
+  color: var(--primary);
   text-transform: uppercase;
   margin-bottom: 12px;
 }
 
 .brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 64px;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: 54px;
+  font-weight: 800;
   color: #fff;
-  line-height: 1;
-  letter-spacing: -0.01em;
+  line-height: 0.95;
+  letter-spacing: -2px;
 }
 
 .brand-name span {
-  color: var(--gold);
+  color: var(--primary);
 }
 
 .brand-descriptor {
-  font-size: 11px;
-  letter-spacing: 0.25em;
-  color: var(--muted);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  color: var(--text-dim);
   text-transform: uppercase;
-  margin-top: 14px;
+  margin-top: 18px;
 }
 
 .hero-right {
-  background: var(--gold);
-  padding: 50px 40px;
+  background: var(--bg-dark);
+  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  border-left: 1px solid var(--border);
 }
 
 .hero-right-label {
   font-size: 9px;
-  letter-spacing: 0.35em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.65);
+  color: var(--text-dim);
   margin-bottom: 8px;
 }
 
 .hero-right-stat {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: 48px;
+  font-weight: 800;
   color: #fff;
   line-height: 1;
   margin-bottom: 4px;
+  letter-spacing: -1.5px;
 }
 
 .hero-right-sub {
   font-size: 11px;
-  color: rgba(255,255,255,0.75);
+  color: var(--primary);
   letter-spacing: 0.1em;
   margin-bottom: 28px;
+  font-weight: 500;
 }
 
 .hero-right-divider {
   height: 1px;
-  background: rgba(255,255,255,0.25);
+  background: var(--border);
   margin-bottom: 20px;
 }
 
@@ -162,23 +176,24 @@ html, body {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: rgba(255,255,255,0.15);
-  border: 1px solid rgba(255,255,255,0.3);
-  padding: 7px 14px;
-  border-radius: 2px;
+  background: rgba(0, 240, 144, 0.05);
+  border: 1px solid var(--primary-glow);
+  padding: 8px 14px;
+  border-radius: 6px;
   width: fit-content;
 }
 
 .superhost-icon {
-  font-size: 16px;
+  font-size: 14px;
+  color: var(--primary);
 }
 
 .superhost-text {
   font-size: 10px;
-  letter-spacing: 0.15em;
+  letter-spacing: 0.1em;
   text-transform: uppercase;
   color: #fff;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 /* BODY */
@@ -187,56 +202,76 @@ html, body {
   grid-template-columns: 1fr 1fr;
   gap: 0;
   margin: 0 -40px;
-  border-top: 3px solid var(--gold);
+  border-bottom: 1px solid var(--border);
 }
 
 .body-left {
-  padding: 48px 40px;
+  padding: 60px 40px;
   border-right: 1px solid var(--border);
 }
 
 .body-right {
-  padding: 48px 40px;
+  padding: 60px 40px;
 }
 
 .section-eyebrow {
   font-size: 9px;
-  letter-spacing: 0.35em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.section-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: var(--primary);
 }
 
 .section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px;
-  font-weight: 400;
-  color: var(--ink);
-  line-height: 1.3;
-  margin-bottom: 16px;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.2;
+  margin-bottom: 18px;
+  letter-spacing: -0.5px;
 }
 
 .section-body {
   font-size: 13.5px;
   line-height: 1.8;
-  color: var(--warm);
-  margin-bottom: 24px;
+  color: var(--text-dim);
+  margin-bottom: 30px;
 }
 
 /* VERTICALS */
 .vertical-list {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 16px;
 }
 
 .vertical-item {
   display: flex;
   align-items: flex-start;
-  gap: 14px;
-  padding: 14px 16px;
-  background: var(--cream);
-  border-left: 3px solid var(--gold);
+  gap: 16px;
+  padding: 16px;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  transition: var(--transition);
+}
+
+.vertical-item:hover {
+  border-color: var(--border-glow);
+  background: rgba(0, 240, 144, 0.02);
 }
 
 .vertical-icon-wrap {
@@ -246,30 +281,28 @@ html, body {
 }
 
 .vertical-item-name {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 2px;
-  letter-spacing: 0.02em;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
 .vertical-item-desc {
-  font-size: 11.5px;
-  color: var(--muted);
-  line-height: 1.5;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
 }
 
 /* HOW IT WORKS */
 .steps-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
 }
 
 .step-row {
   display: flex;
-  gap: 16px;
-  padding: 14px 0;
+  gap: 20px;
+  padding: 18px 0;
   border-bottom: 1px solid var(--border);
   align-items: flex-start;
 }
@@ -277,95 +310,108 @@ html, body {
 .step-row:last-child { border-bottom: none; }
 
 .step-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 28px;
-  font-weight: 400;
-  color: var(--gold-light);
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 800;
+  color: var(--primary);
+  opacity: 0.5;
   line-height: 1;
   flex-shrink: 0;
-  width: 36px;
+  width: 30px;
 }
 
-.step-content {}
-
 .step-title {
-  font-size: 13px;
-  font-weight: 500;
-  color: var(--ink);
-  margin-bottom: 2px;
+  font-size: 13.5px;
+  font-weight: 600;
+  color: #fff;
+  margin-bottom: 4px;
 }
 
 .step-desc {
-  font-size: 11.5px;
-  color: var(--muted);
-  line-height: 1.55;
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.6;
 }
 
 /* COMPARISON TABLE */
 .comparison-wrap {
   margin: 0 -40px;
-  padding: 40px 40px;
-  background: var(--ink);
+  padding: 60px 40px;
+  background: var(--bg-deep);
+  border-bottom: 1px solid var(--border);
 }
 
 .comparison-eyebrow {
   font-size: 9px;
-  letter-spacing: 0.35em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.comparison-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: var(--primary);
 }
 
 .comparison-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: 26px;
+  font-weight: 700;
   color: #fff;
-  margin-bottom: 24px;
+  margin-bottom: 30px;
+  letter-spacing: -0.5px;
 }
 
 table {
   width: 100%;
   border-collapse: collapse;
-  font-size: 12.5px;
+  font-size: 13px;
 }
 
 thead tr {
-  border-bottom: 1px solid rgba(184, 144, 42, 0.4);
+  border-bottom: 1px solid rgba(0, 240, 144, 0.3);
 }
 
 th {
   text-align: left;
-  padding: 10px 12px;
+  padding: 12px 14px;
   font-size: 9px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
-  font-weight: 400;
+  color: var(--primary);
+  font-weight: 600;
 }
 
 tbody tr {
-  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid var(--border);
 }
 
 tbody tr:last-child {
   border-bottom: none;
-  background: rgba(184, 144, 42, 0.12);
+  background: rgba(0, 240, 144, 0.05);
 }
 
 td {
-  padding: 11px 12px;
-  color: rgba(255,255,255,0.75);
+  padding: 14px;
+  color: var(--text-dim);
   vertical-align: middle;
 }
 
 td:first-child {
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
 }
 
 td:nth-child(3) {
-  font-weight: 500;
+  font-weight: 600;
   color: #fff;
   text-align: center;
 }
@@ -375,168 +421,185 @@ th:nth-child(3) { text-align: center; }
 .risk-pill {
   display: inline-block;
   font-size: 9px;
-  padding: 2px 8px;
-  border-radius: 2px;
-  letter-spacing: 0.1em;
+  padding: 3px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
   text-transform: uppercase;
+  font-weight: 600;
 }
 
-.risk-low { background: rgba(100, 200, 120, 0.15); color: #7dc98a; }
-.risk-med { background: rgba(184, 144, 42, 0.2); color: var(--gold-light); }
-.risk-high { background: rgba(220, 80, 80, 0.15); color: #e08080; }
+.risk-low { background: rgba(0, 240, 144, 0.1); color: var(--primary); }
+.risk-med { background: rgba(255, 200, 50, 0.1); color: #ffd043; }
+.risk-high { background: rgba(240, 80, 80, 0.1); color: #ff6b6b; }
 
 .highlight-row td { color: #fff !important; }
-.highlight-row td:nth-child(3) { color: var(--gold-light) !important; font-size: 14px; }
+.highlight-row td:nth-child(3) { color: var(--primary) !important; font-size: 15px; }
 
 /* TIERS */
 .tiers-wrap {
   margin: 0 -40px;
-  padding: 40px 40px;
-  background: var(--cream);
-  border-top: 1px solid var(--border);
+  padding: 60px 40px;
+  background: var(--bg-dark);
+  border-bottom: 1px solid var(--border);
 }
 
 .tiers-eyebrow {
   font-size: 9px;
-  letter-spacing: 0.35em;
+  font-weight: 600;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tiers-eyebrow::before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 1px;
+  background: var(--primary);
 }
 
 .tiers-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1px;
-  background: var(--border);
-  border: 1px solid var(--border);
+  gap: 16px;
 }
 
 .tier {
-  background: var(--paper);
-  padding: 24px 20px;
-  position: relative;
+  background: var(--glass);
+  border: 1px solid var(--border);
+  padding: 28px 24px;
+  border-radius: 12px;
+  transition: var(--transition);
+}
+
+.tier:hover {
+  transform: translateY(-4px);
+  border-color: var(--border-glow);
 }
 
 .tier.featured {
-  background: var(--ink);
+  background: rgba(0, 240, 144, 0.02);
+  border: 1px solid var(--primary);
+  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
 }
 
 .tier-tag {
   font-size: 8px;
-  letter-spacing: 0.25em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
-  color: var(--gold);
+  color: var(--primary);
   margin-bottom: 12px;
+  font-weight: 600;
 }
-
-.tier.featured .tier-tag { color: var(--gold-light); }
 
 .tier-amount {
-  font-family: 'Playfair Display', serif;
-  font-size: 32px;
-  font-weight: 400;
-  color: var(--ink);
+  font-family: var(--font-heading);
+  font-size: 30px;
+  font-weight: 800;
+  color: #fff;
   line-height: 1;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -1px;
 }
-
-.tier.featured .tier-amount { color: #fff; }
 
 .tier-return {
   font-size: 12px;
-  color: var(--gold);
-  margin-bottom: 16px;
-  font-style: italic;
+  color: var(--primary-bright);
+  margin-bottom: 18px;
+  font-weight: 500;
 }
-
-.tier.featured .tier-return { color: var(--gold-light); }
 
 .tier-features {
   list-style: none;
   border-top: 1px solid var(--border);
-  padding-top: 14px;
+  padding-top: 16px;
 }
 
-.tier.featured .tier-features { border-color: rgba(255,255,255,0.1); }
+.tier.featured .tier-features { border-color: rgba(0, 240, 144, 0.15); }
 
 .tier-features li {
-  font-size: 11px;
-  color: var(--muted);
-  padding: 4px 0;
-  padding-left: 12px;
+  font-size: 11.5px;
+  color: var(--text-dim);
+  padding: 5px 0;
+  padding-left: 14px;
   position: relative;
   line-height: 1.5;
 }
 
-.tier.featured .tier-features li { color: rgba(255,255,255,0.55); }
-
 .tier-features li::before {
-  content: '—';
+  content: '→';
   position: absolute;
   left: 0;
-  color: var(--gold);
-  font-size: 9px;
+  color: var(--primary);
+  font-size: 10px;
 }
 
 /* FOOTER CTA */
 .footer-cta {
   margin: 0 -40px;
-  padding: 36px 40px;
-  background: var(--gold);
+  padding: 45px 40px;
+  background: var(--bg-deep);
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
   gap: 32px;
+  border-bottom: 1px solid var(--border);
 }
 
 .footer-cta-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px;
-  font-weight: 400;
+  font-family: var(--font-heading);
+  font-size: 24px;
+  font-weight: 700;
   color: #fff;
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  letter-spacing: -0.5px;
 }
 
 .footer-cta-sub {
-  font-size: 12px;
-  color: rgba(255,255,255,0.75);
-  letter-spacing: 0.05em;
+  font-size: 12.5px;
+  color: var(--text-dim);
 }
 
 .footer-contact { text-align: right; }
 
 .footer-contact-label {
   font-size: 8px;
-  letter-spacing: 0.3em;
+  letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: rgba(255,255,255,0.6);
+  color: var(--text-dim);
   display: block;
   margin-bottom: 6px;
+  font-weight: 600;
 }
 
 .footer-contact-name {
-  font-family: 'Playfair Display', serif;
+  font-family: var(--font-heading);
   font-size: 20px;
+  font-weight: 700;
   color: #fff;
   display: block;
-  margin-bottom: 2px;
+  margin-bottom: 4px;
 }
 
 .footer-contact-web {
-  font-size: 10px;
-  letter-spacing: 0.1em;
-  color: rgba(255,255,255,0.7);
+  font-size: 11px;
+  color: var(--primary);
+  text-decoration: none;
 }
 
 /* DISCLAIMER */
 .disclaimer {
-  font-size: 8.5px;
-  color: var(--muted);
+  font-size: 9px;
+  color: #4a5568;
   line-height: 1.8;
   text-align: center;
-  padding: 28px 20px 0;
-  letter-spacing: 0.03em;
+  padding: 35px 20px 0;
+  letter-spacing: 0.02em;
 }
 
 /* ANIMATIONS */
@@ -545,11 +608,25 @@ th:nth-child(3) { text-align: center; }
   to { opacity: 1; transform: translateY(0); }
 }
 
-.hero { animation: fadeUp 0.5s ease both; }
-.body-grid { animation: fadeUp 0.5s 0.1s ease both; }
-.comparison-wrap { animation: fadeUp 0.5s 0.2s ease both; }
-.tiers-wrap { animation: fadeUp 0.5s 0.3s ease both; }
-.footer-cta { animation: fadeUp 0.5s 0.4s ease both; }
+.hero { animation: fadeUp 0.6s ease both; }
+.body-grid { animation: fadeUp 0.6s 0.1s ease both; }
+.comparison-wrap { animation: fadeUp 0.6s 0.2s ease both; }
+.tiers-wrap { animation: fadeUp 0.6s 0.3s ease both; }
+.footer-cta { animation: fadeUp 0.6s 0.4s ease both; }
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .page { padding: 0 20px 60px; }
+  .top-strip { margin: 0 -20px; padding: 12px 20px; font-size: 8.5px; }
+  .hero { grid-template-columns: 1fr; margin: 0 -20px; }
+  .hero-right { border-left: none; border-top: 1px solid var(--border); }
+  .body-grid { grid-template-columns: 1fr; margin: 0 -20px; }
+  .body-left { border-right: none; border-bottom: 1px solid var(--border); }
+  .comparison-wrap, .tiers-wrap, .footer-cta { margin: 0 -20px; padding: 40px 20px; }
+  .tiers-grid { grid-template-columns: 1fr; }
+  .footer-cta { grid-template-columns: 1fr; text-align: center; }
+  .footer-contact { text-align: center; }
+}
 </style>
 </head>
 <body>
@@ -559,7 +636,7 @@ th:nth-child(3) { text-align: center; }
   <!-- TOP STRIP -->
   <div class="top-strip">
     <span>Private Investment Memorandum</span>
-    <span>Confidential · 2025</span>
+    <span>Confidential · 2026</span>
     <span>South Africa</span>
   </div>
 
@@ -567,12 +644,12 @@ th:nth-child(3) { text-align: center; }
   <div class="hero">
     <div class="hero-left">
       <div class="brand-sub">Private Investment Vehicle</div>
-      <div class="brand-name">Lynn<span>.</span><br>Capital</div>
+      <div class="brand-name">Nikita<span>.</span><br>Capital</div>
       <div class="brand-descriptor">Hospitality · Strategic Ventures · Real Estate</div>
     </div>
     <div class="hero-right">
       <div class="hero-right-label">Minimum Investment</div>
-      <div class="hero-right-stat">R80,000</div>
+      <div class="hero-right-stat">$6,000</div>
       <div class="hero-right-sub">Annual profit share · Renewable terms</div>
       <div class="hero-right-divider"></div>
       <div class="superhost-badge">
@@ -585,10 +662,10 @@ th:nth-child(3) { text-align: center; }
   <!-- BODY GRID -->
   <div class="body-grid">
     <div class="body-left">
-      <div class="section-eyebrow">About Lynn Capital</div>
+      <div class="section-eyebrow">About Nikita Capital</div>
       <div class="section-title">Real assets.<br>Real returns.</div>
       <div class="section-body">
-        Lynn Capital is a private investment vehicle that deploys capital across South Africa's most resilient sectors. We operate on your behalf — you invest, we execute, and you earn an annual profit share from the portfolio. Strategy by Lynn Mapiravana.
+        Nikita Capital is a private investment vehicle that deploys capital across South Africa's most resilient sectors. We operate on your behalf — you invest, we execute, and you earn an annual profit share from the portfolio. Strategy by Nikita Mapiravana.
       </div>
       <div class="section-eyebrow">Where We Invest</div>
       <div class="vertical-list">
@@ -624,14 +701,14 @@ th:nth-child(3) { text-align: center; }
           <div class="step-num">01</div>
           <div class="step-content">
             <div class="step-title">You commit capital</div>
-            <div class="step-desc">Sign a participation agreement and transfer your investment. Minimum R80,000.</div>
+            <div class="step-desc">Sign a participation agreement and transfer your investment. Minimum $6,000.</div>
           </div>
         </div>
         <div class="step-row">
           <div class="step-num">02</div>
           <div class="step-content">
             <div class="step-title">We deploy it</div>
-            <div class="step-desc">Lynn Capital allocates across active deals — Airbnb units, operational ventures, and property.</div>
+            <div class="step-desc">Nikita Capital allocates across active deals — Airbnb units, operational ventures, and property.</div>
           </div>
         </div>
         <div class="step-row">
@@ -661,7 +738,7 @@ th:nth-child(3) { text-align: center; }
 
   <!-- COMPARISON TABLE -->
   <div class="comparison-wrap">
-    <div class="comparison-eyebrow">Why Lynn Capital</div>
+    <div class="comparison-eyebrow">Why Nikita Capital</div>
     <div class="comparison-title">How we compare to conventional SA investments</div>
     <table>
       <thead>
@@ -710,7 +787,7 @@ th:nth-child(3) { text-align: center; }
           <td>Liquid</td>
         </tr>
         <tr class="highlight-row">
-          <td>Lynn Capital</td>
+          <td>Nikita Capital</td>
           <td>ZAR</td>
           <td>15–20%</td>
           <td><span class="risk-pill risk-med">Medium</span></td>
@@ -726,7 +803,7 @@ th:nth-child(3) { text-align: center; }
     <div class="tiers-grid">
       <div class="tier">
         <div class="tier-tag">Entry</div>
-        <div class="tier-amount">R80,000</div>
+        <div class="tier-amount">$6,000</div>
         <div class="tier-return">15% annual profit share</div>
         <ul class="tier-features">
           <li>Portfolio participation</li>
@@ -737,7 +814,7 @@ th:nth-child(3) { text-align: center; }
       </div>
       <div class="tier featured">
         <div class="tier-tag">Growth</div>
-        <div class="tier-amount">R250,000</div>
+        <div class="tier-amount">$25,000</div>
         <div class="tier-return">18% annual profit share</div>
         <ul class="tier-features">
           <li>All Entry benefits</li>
@@ -748,7 +825,7 @@ th:nth-child(3) { text-align: center; }
       </div>
       <div class="tier">
         <div class="tier-tag">Partner</div>
-        <div class="tier-amount">R500,000+</div>
+        <div class="tier-amount">$50,000+</div>
         <div class="tier-return">20% annual profit share</div>
         <ul class="tier-features">
           <li>All Growth benefits</li>
@@ -764,18 +841,18 @@ th:nth-child(3) { text-align: center; }
   <div class="footer-cta">
     <div>
       <div class="footer-cta-title">Ready to put your capital to work?</div>
-      <div class="footer-cta-sub">Private positions are by invitation only. Contact Lynn Capital to begin.</div>
+      <div class="footer-cta-sub">Private positions are by invitation only. Contact Nikita Capital to begin.</div>
     </div>
     <div class="footer-contact">
       <span class="footer-contact-label">Contact</span>
-      <span class="footer-contact-name">Lynn Capital</span>
-      <span class="footer-contact-web">lynnmapiravana12@outlook.com</span>
+      <span class="footer-contact-name">Nikita Capital</span>
+      <a href="mailto:info@nikitacapital.com" class="footer-contact-web">info@nikitacapital.com</a>
     </div>
   </div>
 
   <!-- DISCLAIMER -->
   <div class="disclaimer">
-    This document is a private communication to a select network of investors and does not constitute a public offer of securities or financial services. All investment involves risk. Returns are projections based on operational assumptions and are not guaranteed. Past performance does not guarantee future results. Investors should seek independent legal and financial advice before committing capital. Lynn Capital operates under the umbrella of Gigimobile Group (SA Reg: 2023/535414/07).
+    This document is a private communication to a select network of investors and does not constitute a public offer of securities or financial services. All investment involves risk. Returns are projections based on operational assumptions and are not guaranteed. Past performance does not guarantee future results. Investors should seek independent legal and financial advice before committing capital. Nikita Capital operates under the umbrella of Gigimobile Group (SA Reg: 2023/535414/07).
   </div>
 
 </div>

@@ -1,4 +1,4 @@
-// LYNN INVESTMENT - INTERACTIVE ELEMENTS
+// NIKITA CAPITAL - INTERACTIVE ELEMENTS
 
 document.addEventListener('DOMContentLoaded', () => {
     // Navbar Scroll Effect
@@ -40,10 +40,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const amountBtns = document.querySelectorAll('.amount-btn');
     const bankYear1 = document.getElementById('bank-year-1');
     const bankYear3 = document.getElementById('bank-year-3');
-    const lynnYear1 = document.getElementById('lynn-year-1');
-    const lynnYear3 = document.getElementById('lynn-year-3');
+    const nikitaYear1 = document.getElementById('nikita-year-1');
+    const nikitaYear3 = document.getElementById('nikita-year-3');
     const diffValue = document.getElementById('diff-value');
-    const lynnTierLabel = document.getElementById('lynn-tier-label');
+    const nikitaTierLabel = document.getElementById('nikita-tier-label');
 
     if (amountBtns.length > 0) {
         const formatCurrency = (num) => {
@@ -63,18 +63,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 const bYear1 = amount * 0.06;
                 const bYear3 = amount + (bYear1 * 3);
                 
-                const lYear1 = amount * 0.17;
-                const lYear3 = amount + (lYear1 * 3);
+                const nYear1 = amount * 0.17;
+                const nYear3 = amount + (nYear1 * 3);
                 
-                const annualDiff = lYear1 - bYear1;
+                const annualDiff = nYear1 - bYear1;
 
                 // Update UI with smooth transition feel
                 bankYear1.innerText = formatCurrency(bYear1);
                 bankYear3.innerText = formatCurrency(bYear3);
-                lynnYear1.innerText = formatCurrency(lYear1);
-                lynnYear3.innerText = formatCurrency(lYear3);
+                nikitaYear1.innerText = formatCurrency(nYear1);
+                nikitaYear3.innerText = formatCurrency(nYear3);
                 diffValue.innerText = formatCurrency(annualDiff) + ' more';
-                lynnTierLabel.innerText = tier.toUpperCase();
+                nikitaTierLabel.innerText = tier.toUpperCase();
             });
         });
     }

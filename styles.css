@@ -312,6 +312,19 @@ nav.scrolled {
     opacity: 1;
 }
 
+.card-image-wrap {
+    overflow: hidden;
+    position: relative;
+}
+
+.card-image-wrap img {
+    transition: var(--transition);
+}
+
+.glass-card:hover .card-image-wrap img {
+    transform: scale(1.08);
+}
+
 /* ABOUT SECTION */
 .about-grid {
     display: grid;

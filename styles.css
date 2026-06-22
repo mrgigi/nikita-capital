@@ -85,11 +85,12 @@ nav.scrolled {
 
 .logo {
     font-family: var(--font-heading);
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: 800;
     color: #fff;
     text-decoration: none;
     letter-spacing: -0.5px;
+    flex-shrink: 0;
 }
 
 .logo span {
@@ -161,11 +162,11 @@ nav.scrolled {
     background: radial-gradient(circle at 50% 0%, rgba(0, 240, 144, 0.06) 0%, transparent 60%);
 }
 
-/* MOBILE: stack portrait on top, text below */
+/* MOBILE: portrait on top, text below */
 .hero-grid {
     display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
+    flex-direction: column-reverse;
+    gap: 2rem;
     align-items: center;
     text-align: center;
 }
@@ -252,7 +253,8 @@ nav.scrolled {
     box-shadow: 0 20px 50px rgba(0,0,0,0.6);
     width: 100%;
     max-width: 340px;
-    aspect-ratio: 3/4;
+    /* Compact on mobile — just enough to show the face */
+    aspect-ratio: 4/3;
 }
 
 .hero-image {
@@ -710,6 +712,8 @@ footer {
     nav { padding: 1.8rem 0; }
     nav.scrolled { padding: 1.2rem 0; }
 
+    .logo { font-size: 1.3rem; }
+
     .nav-links { display: flex; }
     .btn-contact { padding: 0.9rem 1.8rem; }
 
@@ -728,7 +732,7 @@ footer {
         text-align: left;
     }
 
-    .hero-image-container { max-width: 100%; }
+    .hero-image-container { max-width: 100%; aspect-ratio: 3/4; }
     .hero-image-wrap { justify-content: flex-end; }
 
     .about-grid {
